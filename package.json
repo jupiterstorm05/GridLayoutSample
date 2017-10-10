@@ -1,0 +1,32 @@
+{
+	"description": "NativeScript Application",
+	"license": "SEE LICENSE IN <your-license-filename>",
+	"readme": "NativeScript Application",
+	"repository": "<fill-your-repository-here>",
+	"nativescript": {
+		"id": "org.nativescript.GridLayoutSample",
+		"tns-ios": {
+			"version": "3.2.0"
+		}
+	},
+	"dependencies": {
+		"@angular/animations": "~4.4.4",
+		"@angular/common": "~4.4.4",
+		"@angular/compiler": "~4.4.4",
+		"@angular/core": "~4.4.4",
+		"@angular/forms": "~4.4.4",
+		"@angular/http": "~4.4.4",
+		"@angular/platform-browser": "~4.4.4",
+		"@angular/router": "~4.4.4",
+		"nativescript-angular": "~4.2.0",
+		"nativescript-theme-core": "~1.0.2",
+		"reflect-metadata": "~0.1.8",
+		"rxjs": "~5.4.2",
+		"tns-core-modules": "~3.2.0",
+		"zone.js": "~0.8.2"
+	},
+	"devDependencies": {
+		"nativescript-dev-typescript": "~0.5.0",
+		"typescript": "~2.5.3"
+	}
+}
