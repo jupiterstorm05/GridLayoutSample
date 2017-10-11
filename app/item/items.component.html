@@ -1,32 +1,37 @@
 <ActionBar title="My App" class="action-bar">
 </ActionBar>
 
-<StackLayout id="mainStackId" horizontalAlignment="center" verticalAlignment="center" backgroundColor="#696969">
-    <GridLayout columns="*, 3*" rows="auto">
-        <GridLayout id="imagesGridId" rows="*,*" col="0" margin="15">
-            <Image src="res://butterfly" stretch="fill" row="0" backgroundColor="#6495ed"></Image>
-            <Image src="res://butterfly1" stretch="fill" row="1" backgroundColor="#bdb76b"></Image>
-        </GridLayout>
-        <StackLayout id="labelStackId" col="1" backgroundColor="#f5f5dc" margin="15" padding="15">
-            <Label text="Label 1" textWrap="true"></Label>
-            <Label text="Label 1" textWrap="true"></Label>
-            <Label text="Label 1" textWrap="true"></Label>
-            <Label text="Label 1" textWrap="true"></Label>
-            <Label text="Label 1" textWrap="true"></Label>
-            <Label text="Label 1" textWrap="true"></Label>
-            <Label text="Label 1" textWrap="true"></Label>
-            <Label text="Label 1" textWrap="true"></Label>
-            <Label text="Label 1" textWrap="true"></Label>
-            <Label text="Label 1" textWrap="true"></Label>
-            <Label text="Label 1" textWrap="true"></Label>
+<ListView [items]="items" class="list-group">
+    <ng-template let-item="item">
+        <StackLayout id="mainStackId" horizontalAlignment="center" verticalAlignment="center"
+                     backgroundColor="#696969" margin="15" borderRadius="15">
+            <GridLayout columns="*, 3*" rows="auto">
+                <GridLayout id="imagesGridId" rows="*,*" col="0" margin="15">
+                    <Image src="res://butterfly" stretch="fill" row="0" backgroundColor="#6495ed"></Image>
+                    <Image src="res://butterfly1" stretch="fill" row="1" backgroundColor="#bdb76b"></Image>
+                </GridLayout>
+                <StackLayout id="labelStackId" col="1" backgroundColor="#f5f5dc" margin="15" padding="15">
+                    <Label [text]="item.name" textWrap="true"></Label>
+                    <Label text="Label 1" textWrap="true"></Label>
+                    <Label text="Label 1" textWrap="true"></Label>
+                    <Label text="Label 1" textWrap="true"></Label>
+                    <Label text="Label 1" textWrap="true"></Label>
+                    <Label text="Label 1" textWrap="true"></Label>
+                    <Label text="Label 1" textWrap="true"></Label>
+                    <Label text="Label 1" textWrap="true"></Label>
+                    <Label text="Label 1" textWrap="true"></Label>
+                    <Label text="Label 1" textWrap="true"></Label>
+                    <Label text="Label 1" textWrap="true"></Label>
+                </StackLayout>
+            </GridLayout>
         </StackLayout>
-    </GridLayout>
-</StackLayout>
+    </ng-template>
+</ListView>
 
 
 <!-- This works as expected. Each image take half the size of screen -->
-<!--<StackLayout>
-    <GridLayout rows="*,*">
+<!--<StackLayout id="workingStack" backgroundColor="#696969" margin="15" borderRadius="15" >
+    <GridLayout rows="*,*" >
         <Image src="res://butterfly" stretch="fill" row="0" margin="10" backgroundColor="#6495ed"></Image>
         <Image src="res://butterfly1" stretch="fill" row="1" margin="10" backgroundColor="#bdb76b"></Image>
     </GridLayout>
